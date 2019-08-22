@@ -3,6 +3,10 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"
     ref="hm" @add="onadd($event)"/>
+    <HelloWorld>
+      <template v-slot:default>aaaaa</template>
+        <template v-slot:content>具名插槽</template>
+    </HelloWorld>
   </div>
 </template>
 
@@ -11,6 +15,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
+  provide:{ai:'ai'},
   components: {
     HelloWorld
   },
